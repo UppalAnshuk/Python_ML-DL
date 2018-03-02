@@ -27,10 +27,10 @@ X_test=np.reshape(X_test,(np.shape(X_test)[0],32*32*3))
 
 #making the model
 model=Sequential()
-model.add(Dense(100,input_dim=3072,activation='relu'))##first layer needs to have  the input dimensions and use of rectifier activation function
-model.add(Dense(70,activation='softmax'))
-model.add(Dense(50,activation='softmax'))
-model.add(Dense(30,activation='softmax'))
+model.add(Dense(100,input_dim=3072,activation='relu',kernel_regularizer=regularizers.l2(0.01)))##first layer needs to have  the input dimensions and use of rectifier activation function
+model.add(Dense(70,activation='relu',kernel_regularizer=regularizers.l2(0.01)))
+model.add(Dense(50,activation='relu',kernel_regularizer=regularizers.l2(0.01)))
+model.add(Dense(30,activation='relu'))
 model.add(Dense(num_classes,activation='softmax'))##last layer
 #model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 #sgd = SGD(lr=0.02, decay=0.01/25, momentum=0.9, nesterov=False)
