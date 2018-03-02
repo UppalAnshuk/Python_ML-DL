@@ -32,11 +32,14 @@ model.add(Dense(70,activation='relu',kernel_regularizer=regularizers.l2(0.01)))
 model.add(Dense(50,activation='relu',kernel_regularizer=regularizers.l2(0.01)))
 model.add(Dense(30,activation='relu'))
 model.add(Dense(num_classes,activation='softmax'))##last layer
+##Various optimizers for the neural network
 #model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 #sgd = SGD(lr=0.02, decay=0.01/25, momentum=0.9, nesterov=False)
 #model.compile(loss='categorical_crossentropy',optimizer=sgd,metrics=['accuracy'])
-Ada=Adadelta(lr=1.0, rho=0.95, epsilon=None, decay=0.0)
-model.compile(loss='categorical_crossentropy',optimizer=Ada,metrics=['accuracy'])
+#Ada=Adadelta(lr=1.0, rho=0.95, epsilon=None, decay=0.0)
+#model.compile(loss='categorical_crossentropy',optimizer=Ada,metrics=['accuracy'])
+adm=Adam(lr=0.00115, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0, amsgrad=False)#increased the learning rate from default
+model.compile(loss='categorical_crossentropy', optimizer=adm, metrics=['accuracy'])
 print(model.summary())
 
 ##Training the model
