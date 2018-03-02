@@ -1,11 +1,12 @@
 import numpy as np
-import keras
 from keras.layers import Dense
 from keras.models import Sequential
 from keras.datasets import cifar10
 from keras.utils import np_utils
 from keras.optimizers import SGD
 from keras.optimizers import Adadelta
+from keras.optimizers import Adam
+from keras from keras import regularizers
 
 #load data
 (X_train, y_train), (X_test, y_test) = cifar10.load_data()
