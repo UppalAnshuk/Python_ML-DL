@@ -1,3 +1,7 @@
+#Author=====Anshuk Uppal
+'''Max accuracy achieved by this model is nearly 50% right now'''
+
+
 import numpy as np
 from keras.layers import Dense
 from keras.models import Sequential
@@ -28,9 +32,9 @@ X_test=np.reshape(X_test,(np.shape(X_test)[0],32*32*3))
 
 #making the model
 model=Sequential()
-model.add(Dense(100,input_dim=3072,activation='relu',kernel_regularizer=regularizers.l2(0.01)))##first layer needs to have  the input dimensions and use of rectifier activation function
-model.add(Dense(70,activation='relu',kernel_regularizer=regularizers.l2(0.01)))
-model.add(Dense(50,activation='relu',kernel_regularizer=regularizers.l2(0.01)))
+model.add(Dense(100,input_dim=3072,activation='relu',kernel_regularizer=regularizers.l2(0.0001)))##first layer needs to have  the input dimensions and use of rectifier activation function
+model.add(Dense(70,activation='relu'))##,kernel_regularizer=regularizers.l2(0.01)))
+model.add(Dense(50,activation='relu'))##,kernel_regularizer=regularizers.l2(0.01)))
 model.add(Dense(30,activation='relu'))
 model.add(Dense(num_classes,activation='softmax'))##last layer
 ##Various optimizers for the neural network
