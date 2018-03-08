@@ -5,7 +5,7 @@ import numpy as np
 n_epochs = 50
 
 t0, t1 = 5, 50 # learning schedule hyperparameters
-def learning_schedule(t): ##responsible for determining a learning schedule
+def learning_schedule(t): ##responsible for determining the learning parameter
 	return t0 / (t + t1)
 theta = np.random.randn(2,1) # random initialization of parameters
 for epoch in range(n_epochs):
