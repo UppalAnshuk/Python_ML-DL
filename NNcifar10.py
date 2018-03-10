@@ -32,6 +32,7 @@ X_test=np.reshape(X_test,(np.shape(X_test)[0],32*32*3))
 
 #making the model
 model=Sequential()
+##regularization has just been added for the sake of trying, this is a highly underfitting model!! accuracy on the test set -50%
 model.add(Dense(100,input_dim=3072,activation='relu',kernel_regularizer=regularizers.l2(0.0001)))##first layer needs to have  the input dimensions and use of rectifier activation function
 model.add(Dense(70,activation='relu'))##,kernel_regularizer=regularizers.l2(0.01)))
 model.add(Dense(50,activation='relu'))##,kernel_regularizer=regularizers.l2(0.01)))
