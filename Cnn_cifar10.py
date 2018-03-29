@@ -49,7 +49,7 @@ KeyboardInterrupt
 model3=Sequential()
 model3.add(Conv3D(20,(3,3,3),strides=(1,1,1),input_shape=(500,3,32,32),padding="same",data_format="channels_first",use_bias=False))
 model3.add(Dropout(0.2))
-model3.add(Conv3D(40,(1,7,7),strides=(1,1,1),padding="valid",activation='relu',use_bias=True))
+model3.add(Conv3D(40,(3,7,7),strides=(1,1,1),padding="valid",activation='relu',use_bias=True))
 model3.add(Dropout(0.4))
 model3.add(Conv3D(40,(1,7,7),strides=(1,1,1),padding="valid",activation='relu',use_bias=True))
 model3.add(MaxPooling3D(pool_size=(1,2,2),padding='valid'))
