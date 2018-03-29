@@ -18,34 +18,6 @@ Y_train = np_utils.to_categorical(Y_train)
 y_test = np_utils.to_categorical(y_test)
 num_classes = y_test.shape[1]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-###########################################################
-''' model1=Sequential()
->>> model1.add(Conv3D(20,(3,3,3),strides=(1,1,1),input_shape=(50000,32,32,3),padding="valid",dilation_rate=0))
->>> model1.add(Dropout(0.2))
->>> model1.add(Conv3D(40,(3,3,3),strides=(1,1,1),padding="valid",dilation_rate=0,activation='relu',use_bias=True)
-... 
-KeyboardInterrupt
->>> model1.add(Conv3D(40,(3,3,3),strides=(1,1,1),padding="valid",dilation_rate=0,activation='relu',use_bias=True))
->>> model1.add(Dropout(0.4))
->>> model1.add(Conv3D(20,(5,5,3),strides=(1,1,1),padding="valid",dilation_rate=0,activation='relu',use_bias=True))
->>> mode2=Sequential()
->>> mode2.add(Conv3D(20,(3,3,3),strides=(1,1,1),input_shape=(50000,32,32,3),padding="valid",dilation_rate=0))
->>> mode2.add(Dropout(0.2))'''
 model3=Sequential()
 model3.add(Conv3D(20,(3,3,3),strides=(1,1,1),input_shape=(500,3,32,32),padding="same",data_format="channels_first",use_bias=False))
 model3.add(Dropout(0.2))
