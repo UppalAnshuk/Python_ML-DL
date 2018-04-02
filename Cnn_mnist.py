@@ -59,6 +59,7 @@ scores = model3.evaluate(x_eval,y_eval, verbose=0)
 print("Accuracy: %.2f%%" % (scores[1]*100))
 """
 
+A simple CNN trained on the famous MNIST dataset, details are as below-
 Layer (type)                 Output Shape              Param #   
 =================================================================
 conv2d_1 (Conv2D)            (None, 20, 28, 28)        180       
@@ -85,4 +86,48 @@ Total params: 446,958
 Trainable params: 446,958
 Non-trainable params: 0
 _________________________________________________________________
+None
+Train on 40000 samples, validate on 10000 samples
+Epoch 1/20
+40000/40000 [==============================] - 634s 16ms/step - loss: 0.2594 - acc: 0.9211 - val_loss: 0.0504 - val_acc: 0.9843
+Epoch 2/20
+40000/40000 [==============================] - 624s 16ms/step - loss: 0.0878 - acc: 0.9736 - val_loss: 0.0391 - val_acc: 0.9866
+Epoch 3/20
+40000/40000 [==============================] - 649s 16ms/step - loss: 0.0650 - acc: 0.9808 - val_loss: 0.0335 - val_acc: 0.9882
+Epoch 4/20
+40000/40000 [==============================] - 628s 16ms/step - loss: 0.0512 - acc: 0.9843 - val_loss: 0.0262 - val_acc: 0.9907
+Epoch 5/20
+40000/40000 [==============================] - 622s 16ms/step - loss: 0.0452 - acc: 0.9866 - val_loss: 0.0250 - val_acc: 0.9907
+Epoch 6/20
+40000/40000 [==============================] - 627s 16ms/step - loss: 0.0381 - acc: 0.9888 - val_loss: 0.0247 - val_acc: 0.9913
+Epoch 7/20
+40000/40000 [==============================] - 640s 16ms/step - loss: 0.0347 - acc: 0.9895 - val_loss: 0.0233 - val_acc: 0.9919
+Epoch 8/20
+40000/40000 [==============================] - 752s 19ms/step - loss: 0.0316 - acc: 0.9904 - val_loss: 0.0218 - val_acc: 0.9919
+Epoch 9/20
+40000/40000 [==============================] - 782s 20ms/step - loss: 0.0296 - acc: 0.9913 - val_loss: 0.0222 - val_acc: 0.9921
+Epoch 10/20
+40000/40000 [==============================] - 845s 21ms/step - loss: 0.0279 - acc: 0.9915 - val_loss: 0.0224 - val_acc: 0.9925
+Epoch 11/20
+40000/40000 [==============================] - 802s 20ms/step - loss: 0.0237 - acc: 0.9926 - val_loss: 0.0238 - val_acc: 0.9925
+Epoch 12/20
+40000/40000 [==============================] - 618s 15ms/step - loss: 0.0262 - acc: 0.9922 - val_loss: 0.0225 - val_acc: 0.9932
+Epoch 13/20
+40000/40000 [==============================] - 621s 16ms/step - loss: 0.0230 - acc: 0.9925 - val_loss: 0.0212 - val_acc: 0.9932
+Epoch 14/20
+40000/40000 [==============================] - 624s 16ms/step - loss: 0.0209 - acc: 0.9933 - val_loss: 0.0222 - val_acc: 0.9928
+Epoch 15/20
+40000/40000 [==============================] - 624s 16ms/step - loss: 0.0198 - acc: 0.9935 - val_loss: 0.0224 - val_acc: 0.9927
+Epoch 16/20
+40000/40000 [==============================] - 619s 15ms/step - loss: 0.0197 - acc: 0.9934 - val_loss: 0.0230 - val_acc: 0.9925
+Epoch 17/20
+40000/40000 [==============================] - 630s 16ms/step - loss: 0.0194 - acc: 0.9936 - val_loss: 0.0225 - val_acc: 0.9926
+Epoch 18/20
+40000/40000 [==============================] - 642s 16ms/step - loss: 0.0179 - acc: 0.9948 - val_loss: 0.0218 - val_acc: 0.9929
+Epoch 19/20
+40000/40000 [==============================] - 621s 16ms/step - loss: 0.0184 - acc: 0.9942 - val_loss: 0.0229 - val_acc: 0.9921
+Epoch 20/20
+40000/40000 [==============================] - 611s 15ms/step - loss: 0.0183 - acc: 0.9938 - val_loss: 0.0225 - val_acc: 0.9928
+Accuracy: 99.08%
+Without any fancy stuff like leaky ReLU / ELU or batch normalization this model is able to achieve very high accuracy!!
 """
